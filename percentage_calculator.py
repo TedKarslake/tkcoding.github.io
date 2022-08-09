@@ -1,0 +1,8 @@
+print("")
+first_number = input("Number: ")
+print("")
+percentage = input("Percentage: ")
+print("")
+sum = float(first_number) * (float(first_number) + float(percentage))
+print(sum)
+print("")
