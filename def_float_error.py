@@ -1,16 +1,12 @@
-def truefloat(prompt):
-    #this is to stop user error when entering something other than a number into IPT Calc v4
+def input_loop():
     while True:
         try:
-            value = float(input(prompt))
-        except ValueError:
-            print("Please enter a number.")
-            continue
-
-        if value == str():
-            continue
-
-        else:
+            value = float(input("Enter your number: "))
             break
+        except:
+            print("Invalid entry")
+            continue
     return value
 
+value = input("enter your number: ")
+print(value)
