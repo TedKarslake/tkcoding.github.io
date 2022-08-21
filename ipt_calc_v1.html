@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang ="en">
+    <title>
+        Insurance Premium Tax Calculator
+    </title>
+    <header>
+        <h1>Insurance Premium Tax Calculator</h1>
+    </header>
+    <body>
+
+        <script>
+            function net_ipt_calc(){
+                var x = document.getElementById("ipt_amount").value;
+                var y = document.getElementById("brokerage_amount").value;
+                var z = document.getElementById("net_premium").value;
+                var pcnt_dec = x / 100
+                var broker_dec = y / 100
+                var sum = pcnt_dec * z
+                var broker_sum = broker_dec * z
+                document.getElementById("net_display").innerHTML = sum;
+                document.getElementById("brker_amount").innerHTML = broker_sum;
+            }
+
+            function gross_ipt_calc(){
+                var x = document.getElementById("ipt_amount").value;
+                var y = document.getElementById("brokerage_amount").value;
+                var z = document.getElementById("gross_premium").value;
+                alert((9/5)*C+32);
+            }
+            function showDiv1(){
+                document.getElementById("net_display").style.display = sum;
+                document.getElementById("net_display").style.display = broker_sum;
+            }
+        </script>
+
+        <form name="ipt_calc">
+
+            <label for="ipt_amount">Insurance Premium Tax:</label><br>
+            <input type="text" id="ipt_amount" name="ipt_amount"><br>
+            <br>
+            <label for="brokerage_amount">Brokerage Amount (Percent):</label><br>
+            <input type="text" id="brokerage_amount" name="brokerage_amount"><br>
+            <br>
+            <label for="net_premium">Net Premium:</label><br>
+            <input type="text" id="net_premium" name="net_premium"><br>
+            <br>
+
+            <div id="welcomeDiv"  style="display:none;" class="answer_list" ></div>
+            <input type="button" name="answer" value="Calculate" onclick="showDiv1()" />
+
+            <button type="button" onclick = "ipt_calc()">old</button><br>
+            <br>
+            
+
+            <label for="gross_premium">Gross Premium:</label><br>
+            <input type="text" id="gross_premium" name="gross_premium"><br>
+            <br>
+
+            <button type="button" onclick = "ipt_calc()">Calculate</button>
+
+
+        </form>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang ="en">
+    <title>
+        Insurance Premium Tax Calculator
+    </title>
+    <header>
+        <h1>Insurance Premium Tax Calculator</h1>
+    </header>
+    <body>
+
+        <script>
+            function net_ipt_calc(){
+                const btn = document.getElementById('btn');
+                const net_premium = document.getElementById('net_premium');
+                const output = document.getElementById('output');
+                
+                btn.addEventListener('click', () => {
+                    output.innerHTML = Number(net_premium.value) * 0.12 * 100;
+                })}
+        </script>
+
+    <h4>What is the Net Premium?</h4>
+    <input id="net_premium" type="number" placeholder="Net Premium"></input>
+        
+    <div id="output">
+            
+    </div><br>
+        
+    <button id="btn" type="button">Calculate</button><br>
+
+    </body>
+</html>
